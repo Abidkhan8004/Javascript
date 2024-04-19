@@ -295,6 +295,7 @@
 /// declared it is accessed everywhere while the CONST and LET and follow Global and LOcal VARiables Rules.  
 // let age = 30;
 // // let age = 34; // In the same scope you cant redifine a variable value
+//Github
 
 if(true){
     let age = 45;
