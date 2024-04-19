@@ -291,23 +291,41 @@
 // }
 
 /// Variable AND Block Scope ///
+
 /// Note VAR keyword Doesnot Follow The Local or golbal variables rules once its
 /// declared it is accessed everywhere while the CONST and LET and follow Global and LOcal VARiables Rules.  
 // let age = 30;
 // // let age = 34; // In the same scope you cant redifine a variable value
-//Github added
 
-if(true){
-    let age = 45;
-    const name = 'Shan'; 
-    console.log("inside the codeblock", age, name);
+
+// if(true){
+//     let age = 45;
+//     const name = 'Shan'; 
+//     console.log("inside the 1st codeblock", age, name);
     
-    if(true){
-        let age = 34;
-        console.log("inside the codeblock", age);
-    }
+//     if(true){
+//         let age = 34;
+//         console.log("inside the 2nd codeblock", age);
+//     }
+// }
+
+// console.log("outside the codeblock", age);
+
+
+//////////************ FUNCTIONS ***************///////////////////////
+////////////////////// CHAPTER ///////////////////////////////////////
+// Hoisting Works in Function declration but it doesnt work in functions expression
+
+//Function Declration
+function weekend(){
+    console.log('Hey its Sunday');
 }
+weekend();
 
-console.log("outside the codeblock", age);
-
+//Function Expression
+const Sports = function weekend(){
+    console.log('hey its Sunday');
+}
+weekend();
+console.log(Sports);
 
