@@ -313,19 +313,59 @@
 
 
 //////////************ FUNCTIONS ***************///////////////////////
-////////////////////// CHAPTER ///////////////////////////////////////
+////////////////////// CHAPTER 4 ///////////////////////////////////////
 // Hoisting Works in Function declration but it doesnt work in functions expression
 
 //Function Declration
-function weekend(){
-    console.log('Hey its Sunday');
-}
-weekend();
+// function weekend(){
+//     console.log('Hey its Sunday');
+// }
+// weekend();
 
-//Function Expression
-const Sports = function weekend(){
-    console.log('hey its Sunday');
-}
-weekend();
-console.log(Sports);
+// //Function Expression
+// const Sports = function weekend(){
+//     console.log('hey its Sunday');
+// }
+// weekend();
+// console.log(Sport);
+
+////// Arguments And Parameters 
+///if we dont pass any values in the funcion the it will use default values in it
+
+// const spot = function(name = 'Ali', time = 'Evening'){
+//     console.log(`Good ${time} ${name}`);
+// };
+//  spot();
+//  spot ('ABID', 'Morning');
+
+//// Returnin Values To A Function
+
+// {
+    // //     let area = 3.14 * radius**2 + height+5;
+    // //     return area;
+    // }
+//     const calcarea = function (radius,height)
+//           {
+//             return  3.14 * radius**2 + height+5;
+           
+//           }
+// const area = calcarea(2,1);
+// console.log(area);
+
+// const calvol = function(area, length){
+//         return area * length * 2;
+// } 
+// const vol = calvol (area,2 );
+// console.log (vol);
+
+////// Arrow Funtions ///////
+// const area = (radius,length) =>  3.14* radius**2 + length*1;
+
+// const area1 = area (5,1);
+// console.log('area is',area1);
+
+// const great = (Hello) => "hello";
+// const result = great(); 
+// console.log('This is ', result);
+
 
