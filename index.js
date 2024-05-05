@@ -524,4 +524,4 @@ const spanBye = document.querySelector("#Bye")
 spanHi.classList.toggle("hi4", true)
 
 spanHi.style.color = "yellow"
-spanHi.style.backgroundColor = "purple"
+spanHi.style.backgroundColor = "black"
