@@ -368,4 +368,160 @@
 // const result = great(); 
 // console.log('This is ', result);
 
+// /////// Functions VS Methods ////////
+// const name1 = 'Abid';
+// // Functions
 
+// const greet = () => 'Hello';
+// let resultone = greet();
+// console.log (resultone);
+
+// //Methods
+// let resultTwo = name1.toLowerCase();
+// console.log(resultTwo);
+
+///// CallBack and For Each Method///////
+// let people = ['Abrar','Babar','Ali'];
+// people.forEach (person => {
+//     console.log(person);
+// });
+
+////// Call BAck Functions in Actions///////////
+
+// const ul = document.querySelector('.people');
+// const people = ['Abrar', 'Khan', 'Ali', 'Khan'];
+// let html = ``;
+// people.forEach (person => {
+//     html += `<li style = "colour: purple">${person}</li>`;
+
+// });
+// console.log(html);
+// ul.innerhtml  = html;
+
+
+//////////////////// OBJECTS //////////////////////////
+// let user = {
+//     name: 'Harry',
+//     age: 25,
+//     class: "8th WallFlower",
+//     Blogs:['Hello Every Is there', 'Yeah All are there']
+
+// };
+// console.log(user);
+// console.log(user.name);
+// console.log(user.age);
+// user  ['name'] = 'Ali';
+// console.log(user);
+// console.log(typeof user);
+
+/////////////// Adding methods to Objects //////////////////
+// let user = {
+//     name: 'Harry',
+//     age: 25,
+//     class: "8th WallFlower",
+//     Blogs:['Hello Every Is there', 'Yeah All are there'],
+//     login: function(){
+//         console.log('The User has Logged in');
+//     },
+//     logout: function(){
+//         console.log('The User logged out');
+//     }, --> A method attached to our object
+
+// };
+// console.log(user);
+// user.login();
+// user.logout();
+
+///////// This And Arrays of Objects ///////////////
+
+// const video = {
+//     title: 'a',
+//     age: 23,
+//     letters: ['a', 'b', 'c'],
+//     showletters(){
+//         this.letters.forEach(function(tags){
+//             console.log(this.title, tags);
+//         }, this);
+//     }
+//     // play (){
+//     //     console.log(this);
+//     // }
+// };
+// video.showletters();
+// // function video1 (){
+// //     this.title = this
+// //     console.log(this);
+    
+// //     }
+// // const v = new video1('title')
+// // // video.play(this)
+
+/////////  Arrays of Objects ///////////////
+
+// const movie = {
+//     blogs:[
+//         {title: "Hello Cristie" , likes: 50},
+//         {title: "Hello Holand" , likes: 60},
+
+//     ]
+// };
+// console.log(movie.blogs); 
+
+///////////// Maths Funtion /////////////////
+// const random = Math.random();
+// console.log(random);
+// console.log(Math.round(random * 100));
+
+/////////////// Primitive And reference Values /////////////////
+/// Primitive types (no, strings and booleans) are stored in the stack 
+// let scoreone = 50;
+// let scoretwo = scoreone;
+// console.log(`scoreone: ${scoreone}`, `scoretwo: ${scoretwo}` );
+
+// scoreone = 100;
+// console.log(`scoreone: ${scoreone}`, `scoretwo: ${scoretwo}` );
+
+// //// Reference types ////
+// // Reference types (All types of objects, Arrays and Functions)  are stored in heap and both the pointers from the stack target the same value in the heap so if updated one it change the other too
+// const score1 = {name: 'Allen ' , age: 30 }; 
+// const score2 = score1 ;
+// console.log(score1 , score2);
+
+// score1.age = 31;
+// console.log(score1 , score2);
+
+////////////// DOM /////////////////////
+
+// const body = document.body
+// // body.append("Hello World","Bye", 121);
+
+// const div =  document.createElement('div')
+// div.innerText = "HYE" // to put text in the div
+// div.innerHTML = "<strong>Hello World 2</strong>"
+// body.append(div)
+
+// const div = document.querySelector("div")
+//  console.log(div.textContent)
+//  console.log(div.innerText)
+
+const body = document.body
+const div = document.querySelector("div")
+const spanHi = document.querySelector("#Hi")
+const spanBye = document.querySelector("#Bye")
+
+// spanBye.remove()
+// div.append(spanBye)
+// div.remove()
+
+// console.log(spanHi.getAttribute("id"))
+// console.log(spanHi.setAttribute("title", "were"))
+// console.log(spanHi.removeAttribute("title", "were"))
+// console.log(spanHi.datatest)
+// console.log(spanHi.setAttribute("datatest.longername" , "bbbb"))
+
+// spanHi.dataset.newname = "qwer"
+// spanHi.classList.add("new-class")
+spanHi.classList.toggle("hi4", true)
+
+spanHi.style.color = "yellow"
+spanHi.style.backgroundColor = "purple"
