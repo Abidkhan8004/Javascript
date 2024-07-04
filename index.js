@@ -669,16 +669,16 @@
 
 /////////////////// Building a POP ////////////////////////////
 
-const button = document.querySelector("button");
-const popup = document.querySelector(".popup-wrapper");
-const close = document.querySelector(".popup-close");
+const Button = document.querySelector("button");
+const Popup = document.querySelector(".popup-wrapper");
+const Close = document.querySelector(".popup-close");
 
-button.addEventListener("click", () => {
-  popup.style.display = "block";
+Button.addEventListener("click", () => {
+  Popup.style.display = "block";
 });
-close.addEventListener("click", () => {
-  popup.style.display = "none";
+Close.addEventListener("click", () => {
+  Popup.style.display = "none";
 });
-popup.addEventListener("click", () => {
-  popup.style.display = "none";
+Popup.addEventListener("click", () => {
+  Popup.style.display = "none";
 });
