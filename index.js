@@ -669,16 +669,89 @@
 
 /////////////////// Building a POP ////////////////////////////
 
-const Button = document.querySelector("button");
-const Popup = document.querySelector(".popup-wrapper");
-const Close = document.querySelector(".popup-close");
+// const Button = document.querySelector("button");
+// const Popup = document.querySelector(".popup-wrapper");
+// const Close = document.querySelector(".popup-close");
 
-Button.addEventListener("click", () => {
-  Popup.style.display = "block";
+// Button.addEventListener("click", () => {
+//   Popup.style.display = "block";
+// });
+// Close.addEventListener("click", () => {
+//   Popup.style.display = "none";
+// });
+// Popup.addEventListener("click", () => {
+//   Popup.style.display = "none";
+// });
+
+//////////////// Submitt Events ////////////////////////////
+
+const form = document.querySelector(".signupform");
+const feedback = document.querySelector(".feedback-username");
+const feedback1 = document.querySelector(".feedback-password");
+const usernamePattern = /^[a-zA-Z]{6,12}$/;
+const passwordPattern = /^[a-zA-Z]{6,12}$/;
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  console.log(form.username.value, form.password.value);
+
+  ///////// Validation /////////////
+  const username = form.username.value;
+  const password = form.password.value;
+
+  if (usernamePattern.test(username)) {
+    // Feedback for valid username
+    feedback.textContent = "That username is valid";
+    feedback.style.color = "green";
+  } else {
+    feedback.textContent =
+      "Username is not valid. It must contain 6-12 characters.";
+    feedback.style.color = "red";
+  }
+
+  if (passwordPattern.test(password)) {
+    // Feedback for valid username
+    feedback1.textContent = "That password is valid";
+    feedback1.style.color = "green";
+  } else {
+    feedback1.textContent =
+      "password is not valid. It must contain 6-12 characters.";
+    feedback1.style.color = "red";
+  }
 });
-Close.addEventListener("click", () => {
-  Popup.style.display = "none";
+
+/////// Live FEEdBACK //////////////
+
+form.username.addEventListener("keyup", (e) => {
+  console.log(e);
+  if (usernamePattern.test(e.target.value)) {
+    form.username.setAttribute("class", "success");
+  } else {
+    form.username.setAttribute("class", "error");
+    // console.log("failed");
+  }
 });
-Popup.addEventListener("click", () => {
-  Popup.style.display = "none";
+form.password.addEventListener("keyup", (e) => {
+  if (passwordPattern.test(e.target.value)) {
+    form.password.setAttribute("class", "success");
+  } else {
+    // console.log("failed");
+    form.password.setAttribute("class", "error");
+  }
 });
+
+/////////// Testing Regex ///////////////////
+// const username = "1234124abid";
+// const pattern = /^[a-z]{4,}$/;
+
+// // let result = pattern.test(username);
+// // // console.log(result);
+
+// // if (result) {
+// //   console.log("RegEx Test has passed");
+// // } else {
+// //   console.log("RegEx Test has failed");
+// // }
+
+// let result = username.search(pattern);
+// console.log(result);
