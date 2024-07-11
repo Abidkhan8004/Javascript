@@ -688,8 +688,10 @@
 const form = document.querySelector(".signupform");
 const feedback = document.querySelector(".feedback-username");
 const feedback1 = document.querySelector(".feedback-password");
-const usernamePattern = /^[a-zA-Z]{6,12}$/;
-const passwordPattern = /^[a-zA-Z]{6,12}$/;
+const showPasswordCheckbox = document.querySelector("#show-password");
+const passwordInput = document.querySelector("#password");
+const usernamePattern = /^[a-zA-Z0-9@.,]{6,}$/;
+const passwordPattern = /^[a-zA-Z0-9]{6,}$/;
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -698,6 +700,9 @@ form.addEventListener("submit", (e) => {
   ///////// Validation /////////////
   const username = form.username.value;
   const password = form.password.value;
+
+  // console.log(`Username: ${username}`);
+  // console.log(`Password: ${"*".repeat(password.length)}`); // Masks the password characters in the console
 
   if (usernamePattern.test(username)) {
     // Feedback for valid username
@@ -737,6 +742,15 @@ form.password.addEventListener("keyup", (e) => {
   } else {
     // console.log("failed");
     form.password.setAttribute("class", "error");
+  }
+});
+
+// Toggle password visibility
+showPasswordCheckbox.addEventListener("change", () => {
+  if (showPasswordCheckbox.checked) {
+    passwordInput.type = "text";
+  } else {
+    passwordInput.type = "password";
   }
 });
 

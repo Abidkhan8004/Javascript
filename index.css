@@ -85,17 +85,30 @@ input {
   padding: 4px;
   color: rgb(5, 0, 0);
 }
-/* input:hover {
-  background-color: rgb(224, 224, 224);
+input:hover {
+  background-color: rgb(20, 186, 144);
   transition: background-color 1s;
-} */
+}
+.checkbox-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 200px;
+  margin: 10px auto;
+  padding: 4px;
+}
+.checkbox-wrapper label {
+  font-size: 14px;
+  cursor: pointer;
+  margin-left: 10px; /* Add margin to the left of the label */
+}
 
 .paper {
   max-width: 200px;
   display: block;
   margin: 20px auto;
   padding: 20px;
-  /* color: rgb(12, 57, 57); */
+  color: rgb(20, 123, 123);
 }
 .success {
   border: 2px solid rgb(3, 169, 26);

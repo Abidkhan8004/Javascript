@@ -7,7 +7,7 @@
     <title>Document</title>
   </head>
   <body>
-    <h1 class="paper">CODE HERE</h1>
+    <h1 class="paper">Welcome Abid On Board</h1>
     <!-- <ul class = "people"></ul> -->
     <!-- <div>
       <span class="hi1" data-test="pop" data-longer-name="lol" id="Hi"
@@ -58,14 +58,21 @@
     </div> -->
 
     <form class="signupform">
-      <input type="text" id="username" placeholder="Username" />
-      <input type="text" id="password" placeholder="Password" />
-
+      <input type="text" name="username" id="username" placeholder="Username" />
+      <input
+        type="password"
+        name="password"
+        id="password"
+        placeholder="Password"
+      />
+      <div class="checkbox-wrapper">
+        <input class="checkbox" type="checkbox" id="show-password" />
+        <label for="show-password">Show Password</label>
+      </div>
       <input type="submit" value="Submit" />
-      <div class="feedback-username"></div>
-      <div class="feedback-password"></div>
     </form>
-
+    <div class="feedback-username"></div>
+    <div class="feedback-password"></div>
     <script src="index.js"></script>
   </body>
 </html>
